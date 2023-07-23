@@ -1,0 +1,52 @@
+.Posts{
+    border: 1px solid var(--border-color);
+    margin-top: 12px;
+    border-radius: 4px;
+    background-color: white;
+    .heading{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        height: 40px;
+        padding: 10px;
+        cursor: pointer;
+    }
+    .content{
+        height: 320px;
+        display: flex;
+        justify-content: center;
+        img{
+            width: 97%;
+            height: 100%;
+            border-radius: 4px;
+            object-fit: cover;
+        }
+    }
+    .footer{
+        padding: 10px;
+        .post-btns{
+            display: flex;
+            justify-content: space-between;
+        }
+        .like{
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            cursor: pointer;
+            .icon{
+                font-size: 1.3rem;
+            }
+        }
+        .delete-btn{
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+        .caption{
+            margin-top: 5px;
+        }
+        .time-ago{
+            margin-top: 3px;
+            color: #aaa;
+        }
+    }
+}

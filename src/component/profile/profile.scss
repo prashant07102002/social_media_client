@@ -1,0 +1,88 @@
+.Profile {
+    background-color: #f0f2f5;
+    min-height: 100vh;
+  
+    .container {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap; /* Added flex-wrap to adjust layout for small screens */
+    }
+  
+    .left-part {
+      flex: 2;
+      /* height: calc(100vh - 40px); */
+      overflow-y: auto;
+  
+      .message {
+        text-align: center;
+        margin-top: 40px;
+        font-weight: bold;
+        font-size: large;
+      }
+    }
+  
+    .right-part {
+      flex: 1;
+      margin-top: 12px;
+  
+      .profile-card {
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+        text-align: center;
+        padding: 40px;
+        background-color: white;
+  
+        .user-img {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+        }
+  
+        .user-name,
+        .follower-info {
+          margin-top: 10px;
+        }
+  
+        .bio {
+          margin-top: 5px;
+        }
+  
+        .follower-info {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 30px;
+        }
+  
+        .follow,
+        .update-profile {
+          margin-top: 10px;
+          display: inline-block;
+        }
+      }
+    }
+  
+    @media screen and (max-width: 768px) {
+      /* Adjust the layout for screens with a width of 768px or less */
+      .container {
+        flex-direction: column-reverse;
+      }
+  
+      .left-part {
+        flex: 1;
+        /* Reset the height for small screens */
+        height: auto;
+        overflow-y: initial; /* Reset the overflow for small screens */
+      }
+  
+      .right-part {
+        flex: 1;
+        margin-top: 12px;
+  
+        .profile-card {
+          padding: 20px; /* Reduce padding for small screens */
+        }
+      }
+    }
+  }
+  

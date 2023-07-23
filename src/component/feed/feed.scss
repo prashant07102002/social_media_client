@@ -1,0 +1,53 @@
+
+.Feed {
+    background-color: #f0f2f5;
+  
+    .container {
+      display: flex;
+      gap: 15px;
+  
+      @media screen and (max-width: 768px) {
+        /* Change to a column layout for screens with a width of 768px or less */
+        flex-direction: column;
+      }
+    }
+  
+    .left-part {
+      flex: 2;
+      height: calc(100vh - 40px);
+      overflow-y: auto;
+  
+      .message {
+        text-align: center;
+        margin-top: 200px;
+        font-size: larger;
+        font-weight: bold;
+      }
+    }
+  
+    .right-part {
+      flex: 1;
+      margin-top: 12px;
+      border: 1px solid var(--border-color);
+      padding: 15px;
+      border-radius: 4px;
+      background-color: white;
+  
+      .suggesstion {
+        margin-top: 20px;
+      }
+  
+      .title {
+        margin-bottom: 8px;
+      }
+  
+      @media screen and (max-width: 768px) {
+        /* Reduce the width and margin for screens with a width of 768px or less */
+        flex: 0;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  
